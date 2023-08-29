@@ -302,19 +302,19 @@ classdef ATCengine
         numFiles = size(files,1) - 1;
 
         disp("Computing defect trajectories...");
-        % obj = obj.computeDefectTrajs();
-        s_plusDefectTrajX = load("plusDefectTrajX.mat","temp_plusDefectTrajX");
-        obj.plusDefectTrajX = s_plusDefectTrajX.temp_plusDefectTrajX;
-        s_plusDefectTrajY = load("plusDefectTrajY.mat","temp_plusDefectTrajY");
-        obj.plusDefectTrajY = s_plusDefectTrajY.temp_plusDefectTrajY;
-        s_minusDefectTrajX = load("minusDefectTrajX.mat","temp_minusDefectTrajX");
-        obj.minusDefectTrajX = s_minusDefectTrajX.temp_minusDefectTrajX;
-        s_minusDefectTrajY = load("minusDefectTrajY.mat","temp_minusDefectTrajY");
-        obj.minusDefectTrajY = s_minusDefectTrajY.temp_minusDefectTrajY;
-        s_umax = load("umax.mat","velMax");
-        obj.umax = s_umax.velMax;
-        s_vortmax = load("vortmax.mat","vorticityMax");
-        obj.vortmax = s_vortmax.vorticityMax;
+        obj = obj.computeDefectTrajs();
+        % s_plusDefectTrajX = load("plusDefectTrajX.mat","temp_plusDefectTrajX");
+        % obj.plusDefectTrajX = s_plusDefectTrajX.temp_plusDefectTrajX;
+        % s_plusDefectTrajY = load("plusDefectTrajY.mat","temp_plusDefectTrajY");
+        % obj.plusDefectTrajY = s_plusDefectTrajY.temp_plusDefectTrajY;
+        % s_minusDefectTrajX = load("minusDefectTrajX.mat","temp_minusDefectTrajX");
+        % obj.minusDefectTrajX = s_minusDefectTrajX.temp_minusDefectTrajX;
+        % s_minusDefectTrajY = load("minusDefectTrajY.mat","temp_minusDefectTrajY");
+        % obj.minusDefectTrajY = s_minusDefectTrajY.temp_minusDefectTrajY;
+        % s_umax = load("umax.mat","velMax");
+        % obj.umax = s_umax.velMax;
+        % s_vortmax = load("vortmax.mat","vorticityMax");
+        % obj.vortmax = s_vortmax.vorticityMax;
         
         disp("Starting animation...");
 
