@@ -319,9 +319,9 @@ classdef ATCengine
         disp("Starting animation...");
 
         % framesToDisplay = 1:numFiles; % Default
-        % framesToDisplay = 1:5:numFiles; % Sped up a bit
+        framesToDisplay = 1:10:numFiles; % Sped up a bit
         % framesToDisplay = [2,650]; % Snapshots
-        framesToDisplay = [1,20,30,50,100,150,200,250,300,350,400,450,500,550,600,650]; % Snapshots
+        % framesToDisplay = [1,20,30,50,100,150,200,250,300,350,400,450,500,550,600,650]; % Snapshots
         for j = framesToDisplay
             obj.i = (j-1)*obj.outPeriod;
             objStat.i = (j-1)*objStat.outPeriod;
@@ -486,7 +486,7 @@ classdef ATCengine
             Xtemp_12(Xtemp_12 == 0.001) = 0;
             Ytemp_12(Ytemp_12 == 0.001) = 0;
             
-            if isempty(Xtemp12)
+            if length(Xtemp12) < nDefects
                 Xtemp12 = nan;
                 for nInd = 1:nDefects
                     temp_plusDefectTrajX(nInd,j) = nan;
@@ -495,7 +495,7 @@ classdef ATCengine
                     % temp_minusDefectTrajY(nInd,j) = nan;
                 end
             end
-            if isempty(Ytemp12)
+            if length(Ytemp12) < nDefects
                 Ytemp12 = nan;
                 for nInd = 1:nDefects
                     temp_plusDefectTrajX(nInd,j) = nan;
@@ -504,7 +504,7 @@ classdef ATCengine
                     % temp_minusDefectTrajY(nInd,j) = nan;
                 end
             end
-            if isempty(Xtemp_12)
+            if length(Xtemp_12) < nDefects
                 Xtemp_12 = nan;
                 for nInd = 1:nDefects
                     % temp_plusDefectTrajX(nInd,j) = nan;
@@ -513,7 +513,7 @@ classdef ATCengine
                     temp_minusDefectTrajY(nInd,j) = nan;
                 end
             end
-            if isempty(Ytemp_12)
+            if length(Ytemp_12) < nDefects
                 Ytemp_12 = nan;
                 for nInd = 1:nDefects
                     % temp_plusDefectTrajX(nInd,j) = nan;
