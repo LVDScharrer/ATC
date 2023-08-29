@@ -37,7 +37,7 @@ function ATCinit_braid()
     sim.initQxx = Qxx;
     sim.initQxy = Qxy;
     
-    % sim.evolve();
+    sim.evolve();
     
     % sim.tweezerAnim();
     sim.braidAnim();
