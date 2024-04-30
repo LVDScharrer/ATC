@@ -1,4 +1,4 @@
-# Active Topological Control Engine - a nematodynamics simulator
+# Active Topological Control Engine: A MATLAB Nematodynamics Simulator
 
 ATCengine.m defines a simulation object in matlab that lets you evolve a 2D active nematic liquid crystal with a prescribed spatiotemporally varying activity field in time, with control over the initial texture of the nematic and placement of topological defects, and of the various fundamental dimensionless constants of the system.
 
