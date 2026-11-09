@@ -1,5 +1,5 @@
 function ATCinit_braid()
-    sim = ATCengine;
+    sim = ATCengine_dealiased;
     % sim.angA = 0;
     % sim.angB = amp;
     % sim.VX = 0;
